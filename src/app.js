@@ -71,7 +71,7 @@ function searchWeather(event) {
   let city = document.querySelector("#cityInput").value;
   searchCity(city);
 }
-let button = document.querySelector("#buttonForm");
+let button = document.querySelector("#searchForm");
 button.addEventListener("submit", searchWeather);
 
 searchCity("Limassol");
