@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <title>Window Weather App</title>
-
+    <link rel="stylesheet" href="src/styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,7 +16,7 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="src/styles.css" />
+
     <script
       src="https://kit.fontawesome.com/8f569a31f5.js"
       crossorigin="anonymous"
@@ -128,7 +128,7 @@
               <div
                 class="card third-box h-100 bg-transparent border-dark border-5"
               >
-                <div class="card-body">
+                <div id="forecastDays" class="card-body">
                   <h3>Friday</h3>
                   <br />
                   <h3>Saturday</h3>
@@ -150,7 +150,7 @@
               >
                 <div class="card-body">
                   <div class="row">
-                    <div class="col-6">
+                    <div class="col-6" id="forecastDaysIcons">
                       <h3><i class="fas fa-cloud-showers-heavy"></i></h3>
                       <br />
                       <h3><i class="fas fa-sun"></i></h3>
@@ -161,7 +161,7 @@
                       <br />
                       <h3><i class="fas fa-cloud-showers-heavy"></i></h3>
                     </div>
-                    <div class="col-6">
+                    <div class="col-6" id="forecastDaysTemp">
                       <h3>14°</h3>
                       <br />
                       <h3>16°</h3>
