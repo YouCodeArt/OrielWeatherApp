@@ -39,12 +39,10 @@ h1 {
 }
 
 #currentForecast {
-  font-size: 20px;
   font-weight: normal;
 }
 
 #description {
-  font-size: 16px;
   font-weight: normal;
   text-transform: capitalize;
 }
@@ -64,11 +62,8 @@ h1 {
 #forecastDays,
 #forecastDaysIcons,
 #forecastDaysTemp {
-  font-size: 15px;
-}
-
-h3 {
   text-align: center;
+  font-size: 15px;
 }
 
 .first-box {
