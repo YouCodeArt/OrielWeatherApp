@@ -48,6 +48,13 @@ fahrenheitButton.addEventListener("click", showFahrenheit);
 function showTemp(response) {
   document.querySelector("#currentCity").innerHTML = response.data.name;
 
+  let weatherIcon = document.querySelector("#forecastIcon");
+  weatherIcon.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  weatherIcon.setAttribute("alt", response.data.weather[0].description);
+
   let temperature = Math.round(response.data.main.temp);
   let cityTemp = document.querySelector("#currentTemp");
   cityTemp.innerHTML = `${temperature}°`;
