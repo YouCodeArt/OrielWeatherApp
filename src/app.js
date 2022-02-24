@@ -39,10 +39,12 @@ function showTemp(response) {
   cityInput.setAttribute("placeholder", response.data.name);
 */
   document.querySelector("#currentCity").innerHTML = response.data.name;
-  document.querySelector("#currentForecast").innerHTML =
-    response.data.weather[0].main;
-  document.querySelector("#description").innerHTML =
+  document.querySelector("#weatherDescription").innerHTML =
     response.data.weather[0].description;
+  document.querySelector("#humidity").innerHTML = response.data.main.humidity;
+  document.querySelector("#windSpeed").innerHTML = Math.round(
+    response.data.wind.speed
+  );
 }
 
 function convertMetrics() {
