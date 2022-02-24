@@ -6,8 +6,10 @@ html {
   font-family: "Ubuntu", sans-serif;
 }
 
-h1 {
+#appName {
+  font-weight: bold;
   text-align: center;
+  line-height: 2.5;
 }
 
 #forecastIcon {
@@ -53,10 +55,13 @@ h1 {
 }
 
 #searchButton,
-#currentLocation,
+#currentLocation {
+  display: block;
+  margin: 0 auto;
+}
+
 #tempDegree {
   text-align: center;
-  opacity: 0.8;
 }
 
 #forecastDays,
@@ -74,6 +79,7 @@ h1 {
 
 .second-box {
   /*background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/026/839/original/rain.gif?1644353022");*/
+  background-color: blue;
   margin-top: 20px;
   margin-right: 20px;
 }

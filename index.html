@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <title>Window Weather App</title>
+    <title>Weather App</title>
     <link rel="stylesheet" href="src/styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -25,13 +25,13 @@
   </head>
   <body>
     <div class="container">
-      <h1>Window Weather App</h1>
+      <h1 id="appName">Oriel Weather App</h1>
       <div class="card outside text-dark border-dark border-5">
         <div class="row">
           <!--Top left quadrant-->
           <div class="col-6">
             <div
-              class="card first-box h-100 bg-transparent border-dark border-5"
+              class="card first-box h-100 bg-black bg-opacity-50 border-dark border-5"
             >
               <div class="card-body">
                 <div class="row">
@@ -55,7 +55,7 @@
           <!--Top right quadrant-->
           <div class="col-6">
             <div
-              class="card second-box h-100 bg-transparent border-dark border-5"
+              class="card second-box h-100 bg-black bg-opacity-50 border-dark border-5"
             >
               <div class="card-body">
                 <form id="searchForm">
@@ -69,54 +69,43 @@
                       required
                     />
                   </div>
-
-                  <div class="mt-3"></div>
-                  <div id="searchButton">
-                    <button
-                      type="submit"
-                      class="btn btn-light btn-outline-dark"
-                    >
+                  <div class="searchButtons">
+                    <button class="mt-3 btn btn-light btn-outline-dark" 
+                      id="searchButton"
+                      type="submit">
                       <strong>Search</strong>
                     </button>
-                  </div>
+                    <button class="mt-3 btn btn-light btn-outline-dark"
+                      id="currentLocation"
+                      type="submit">
+                      📍 <strong>Current Location</strong>
+                    </button>    
                 </form>
-
-                <div class="mt-3 mb-5">
-                  <div id="currentLocation">
-                    <button
-                      type="submit"
-                      class="btn btn-light btn-outline-dark"
+                <div class="mt-5" id="tempDegree">
+                  <div class="btn-group">
+                    <input
+                      type="radio"
+                      class="btn-check"
+                      name="btnradio"
+                      id="celsius"
+                      autocomplete="on"
+                      checked="on"
+                    />
+                    <label class="btn btn-outline-dark" for="celsius"
+                      ><strong>°C</strong></label
                     >
-                      <strong>📍 Current Location</strong>
-                    </button>
+                    <input
+                      type="radio"
+                      class="btn-check"
+                      name="btnradio"
+                      id="fahrenheit"
+                      autocomplete="off"
+                      
+                    />
+                    <label class="btn btn-outline-dark" for="fahrenheit"
+                      ><strong>°F</strong></label
+                    >
                   </div>
-                </div>
-                <br />
-                <div class="">
-                  <div id="tempDegree">
-                    <div class="btn-group">
-                      <input
-                        type="radio"
-                        class="btn-check"
-                        name="btnradio"
-                        id="celsius"
-                        autocomplete="off"
-                        checked
-                      />
-                      <label class="btn btn-outline-dark" for="celsius"
-                        ><strong>°C</strong></label
-                      >
-                      <input
-                        type="radio"
-                        class="btn-check"
-                        name="btnradio"
-                        id="fahrenheit"
-                        autocomplete="off"
-                      />
-                      <label class="btn btn-outline-dark" for="fahrenheit"
-                        ><strong>°F</strong></label
-                      >
-                    </div>
                   </div>
                 </div>
               </div>
@@ -126,7 +115,7 @@
           <div class="col-6">
             <div class="mt-5">
               <div
-                class="card third-box h-100 bg-transparent border-dark border-5"
+                class="card third-box h-100 bg-black bg-opacity-50 border-dark border-5"
               >
                 <div id="forecastDays" class="card-body">
                   <h3>Friday</h3>
@@ -146,7 +135,7 @@
           <div class="col-6">
             <div class="mt-5">
               <div
-                class="card fourth-box h-100 bg-transparent border-dark border-5"
+                class="card fourth-box h-100 bg-black bg-opacity-50 border-dark border-5"
               >
                 <div class="card-body">
                   <div class="row">

@@ -24,27 +24,7 @@ let days = [
 let today = days[now.getDay()];
 let currentDay = document.querySelector("#currentDay");
 currentDay.innerHTML = today;
-/* 
-let temp = document.querySelector("#currentTemp");
 
-function showCelsius() {
-  temp.innerHTML = `${temp}`;
-}
-let celsiusButton = document.querySelector("#celsius");
-celsiusButton.addEventListener("click", showCelsius);
-
-function showFahrenheit() {
-  let convertMetrics = Math.round(temp * 9) / 5 + 32;
-  temp.innerHTML = `${convertMetrics}`;
-}
-
-let fahrenheitButton = document.querySelector("#fahrenheit");
-fahrenheitButton.addEventListener("click", showFahrenheit);
-*/
-
-//Homework Task
-
-//displayWeatherConditions
 function showTemp(response) {
   document.querySelector("#currentCity").innerHTML = response.data.name;
 
@@ -54,6 +34,8 @@ function showTemp(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   weatherIcon.setAttribute("alt", response.data.weather[0].description);
+
+  celsiusTemp = response.data.main.temp;
 
   let temperature = Math.round(response.data.main.temp);
   let cityTemp = document.querySelector("#currentTemp");
@@ -65,13 +47,30 @@ function showTemp(response) {
     response.data.weather[0].description;
 }
 
+let celsiusTemp = null;
+
+function showCelsius() {
+  let temperature = document.querySelector("#currentTemp");
+  temperature.innerHTML = `${Math.round(celsiusTemp)}°`;
+}
+let celsiusButton = document.querySelector("#celsius");
+celsiusButton.addEventListener("click", showCelsius);
+
+function showFahrenheit() {
+  let temperature = document.querySelector("#currentTemp");
+  let convertMetrics = (celsiusTemp * 9) / 5 + 32;
+  temperature.innerHTML = `${Math.round(convertMetrics)}°`;
+}
+
+let fahrenheitButton = document.querySelector("#fahrenheit");
+fahrenheitButton.addEventListener("click", showFahrenheit);
+
 function searchCity(city) {
   let apiKey = "a5ba4e73c230d5f2cd06859c666eca1b";
   let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(url).then(showTemp);
 }
 
-//handleSubmit
 function searchWeather(event) {
   event.preventDefault();
 
@@ -82,8 +81,6 @@ let button = document.querySelector("#searchForm");
 button.addEventListener("submit", searchWeather);
 
 searchCity("Limassol");
-
-//Bonus Feature - Current Location & Temperature
 
 function showLocation(position) {
   let apiKey = "a5ba4e73c230d5f2cd06859c666eca1b";
