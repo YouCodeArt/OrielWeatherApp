@@ -34,10 +34,10 @@ function showTemp(response) {
 
   celsiusTemp = response.data.main.temp;
   convertMetrics();
-
+  /* 
   let cityInput = document.querySelector("#cityInput");
   cityInput.setAttribute("placeholder", response.data.name);
-
+*/
   document.querySelector("#currentCity").innerHTML = response.data.name;
   document.querySelector("#currentForecast").innerHTML =
     response.data.weather[0].main;
@@ -80,10 +80,16 @@ function searchWeather(event) {
   searchCity(city);
 }
 
+function showCurrentCity(response) {
+  let currentCity = document.querySelector("#cityInput");
+  currentCity.setAttribute("placeholder", response.data.name);
+  showTemp(response);
+}
+
 function showLocation(position) {
   let apiKey = "a5ba4e73c230d5f2cd06859c666eca1b";
   let url = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=${units}`;
-  axios.get(url).then(showTemp);
+  axios.get(url).then(showCurrentCity);
 }
 
 function searchCurrentLocation(event) {
