@@ -64,9 +64,10 @@
                       type="text"
                       id="cityInput"
                       class="form-control"
-                      placeholder="Enter the city name"
+                      placeholder="Enter the city name"                      
                       autofocus="on"
-                      required
+                      onfocus="this.value=''"                 
+                      required                      
                     />
                   </div>
                   <div class="searchButtons">
@@ -77,11 +78,13 @@
                     </button>
                     <button class="mt-3 btn btn-light btn-outline-dark"
                       id="currentLocation"
-                      type="submit">
+                      type="submit"
+                      onclick="document.getElementById('cityInput').value = ''">
                       📍 <strong>Current Location</strong>
                     </button>    
                 </form>
-                <div class="mt-5" id="tempDegree">
+                <div class="mt-5"> 
+                 <form id="tempDegree">
                   <div class="btn-group">
                     <input
                       type="radio"
@@ -89,7 +92,7 @@
                       name="btnradio"
                       id="celsius"
                       autocomplete="on"
-                      checked="on"
+                      checked
                     />
                     <label class="btn btn-outline-dark" for="celsius"
                       ><strong>°C</strong></label
@@ -106,6 +109,7 @@
                       ><strong>°F</strong></label
                     >
                   </div>
+                  </form>
                   </div>
                 </div>
               </div>
