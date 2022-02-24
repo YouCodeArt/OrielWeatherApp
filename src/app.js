@@ -34,10 +34,7 @@ function showTemp(response) {
 
   celsiusTemp = response.data.main.temp;
   convertMetrics();
-  /* 
-  let cityInput = document.querySelector("#cityInput");
-  cityInput.setAttribute("placeholder", response.data.name);
-*/
+
   document.querySelector("#currentCity").innerHTML = response.data.name;
   document.querySelector("#weatherDescription").innerHTML =
     response.data.weather[0].description;

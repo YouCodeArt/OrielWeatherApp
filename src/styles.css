@@ -79,26 +79,22 @@ html {
 }
 
 .first-box {
-  /*background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/026/839/original/rain.gif?1644353022");*/
   margin-top: 20px;
   margin-left: 20px;
 }
 
 .second-box {
-  /*background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/026/839/original/rain.gif?1644353022");*/
   background-color: blue;
   margin-top: 20px;
   margin-right: 20px;
 }
 
 .third-box {
-  /*background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/026/839/original/rain.gif?1644353022");*/
   margin-bottom: 20px;
   margin-left: 20px;
 }
 
 .fourth-box {
-  /*background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/026/839/original/rain.gif?1644353022");*/
   margin-bottom: 20px;
   margin-right: 20px;
 }
