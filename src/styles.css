@@ -1,10 +1,12 @@
-html {
-  zoom: 75%;
+body {
+  background-image: url("../img/app-background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.8;
 }
 
-body {
-  background: #ec6e4c;
-  opacity: 0.8;
+a {
+  color: #cd5a51;
 }
 
 .container {
@@ -14,7 +16,7 @@ body {
 #appName {
   font-weight: bold;
   text-align: center;
-  line-height: 2.5;
+  line-height: 1.5;
 }
 
 #forecastIcon {
@@ -83,7 +85,7 @@ body {
 #forecastDays,
 #forecastDaysTemp {
   text-align: center;
-  font-size: 15px;
+  font-size: 12px;
 }
 
 #forecastDaysIcons {
@@ -91,22 +93,25 @@ body {
 }
 
 .first-box {
+  max-height: 350px;
   margin-top: 20px;
   margin-left: 20px;
 }
 
 .second-box {
-  background-color: blue;
+  max-height: 350px;
   margin-top: 20px;
   margin-right: 20px;
 }
 
 .third-box {
+  max-height: 310px;
   margin-bottom: 20px;
   margin-left: 20px;
 }
 
 .fourth-box {
+  max-height: 310px;
   margin-bottom: 20px;
   margin-right: 20px;
 }
@@ -118,5 +123,6 @@ h6.footer {
 
 .outside {
   margin: 0 auto;
+  min-width: 600px;
   max-width: 600px;
 }
