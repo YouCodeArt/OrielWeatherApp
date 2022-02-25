@@ -72,10 +72,13 @@ html {
 }
 
 #forecastDays,
-#forecastDaysIcons,
 #forecastDaysTemp {
   text-align: center;
   font-size: 15px;
+}
+
+#forecastDaysIcons {
+  text-align: center;
 }
 
 .first-box {
