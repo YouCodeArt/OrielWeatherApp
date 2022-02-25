@@ -61,12 +61,26 @@ function displayForecast(response) {
       forecastIconsHTML =
         forecastIconsHTML +
         `<img
-          src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png"/width="65"/><br/>`;
+          src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png"/width="60"/><br/>`;
     }
   });
   forecastIconsHTML = forecastIconsHTML + ``;
   forecastIcons.innerHTML = forecastIconsHTML;
 
+  /*let fahrenheit = document.querySelector("#fahrenheit");
+  let celsius = document.querySelector("#celsius");
+
+  if (fahrenheit.checked) {
+    temp.innerHTML = `${Math.round((celsiusTemp * 9) / 5 + 32)}°`;
+    fahrenheit.checked = true;
+    celsius.checked = false;
+  } else {
+    temp.innerHTML = `${Math.round(celsiusTemp)}°`;
+    celsius.checked = true;
+    fahrenheit.checked = false;
+  }
+}
+*/
   let forecastTemp = document.querySelector("#forecastDaysTemp");
   let forecastTempHTML = ``;
   forecast.forEach(function (forecastDay, index) {

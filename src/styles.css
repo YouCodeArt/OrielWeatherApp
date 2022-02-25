@@ -2,6 +2,11 @@ html {
   zoom: 75%;
 }
 
+body {
+  background: #ec6e4c;
+  opacity: 0.8;
+}
+
 .container {
   font-family: "Ubuntu", sans-serif;
 }
