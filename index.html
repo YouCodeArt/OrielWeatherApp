@@ -61,7 +61,36 @@
             <div
               class="card second-box h-100 bg-black bg-opacity-25 border-white border-5"
             >
-              <div class="card-body mt-5">
+              <div class="card-body" id="instructions">To view forecast temperature in your preferred unit, make sure it's highlighted first before initiating a search
+                <div class="mt-2"> 
+                 <form id="tempDegree">
+                  <div class="btn-group">
+                    <input
+                      type="radio"
+                      class="btn-check celsius"
+                      name="btnradio"
+                      id="celsius"
+                      autocomplete="on"
+                      checked
+                    />
+                    <label class="btn btn-outline-dark" for="celsius"
+                      ><strong>°C</strong></label
+                    >
+                    <input
+                      type="radio"
+                      class="btn-check fahrenheit"
+                      name="btnradio"
+                      id="fahrenheit"
+                      autocomplete="off"
+                      
+                    />
+                    <label class="btn btn-outline-dark" for="fahrenheit"
+                      ><strong>°F</strong></label
+                    >
+                  </div>
+                  </form>
+                  </div>
+                  <div class="mt-2"> 
                 <form id="searchForm">
                   <div id="searchCity">
                     <input
@@ -87,34 +116,7 @@
                       📍 <strong>Current Location</strong>
                     </button>    
                 </form>
-                <div class="mt-5"> 
-                 <form id="tempDegree">
-                  <div class="btn-group">
-                    <input
-                      type="radio"
-                      class="btn-check"
-                      name="btnradio"
-                      id="celsius"
-                      autocomplete="on"
-                      checked
-                    />
-                    <label class="btn btn-outline-dark" for="celsius"
-                      ><strong>°C</strong></label
-                    >
-                    <input
-                      type="radio"
-                      class="btn-check"
-                      name="btnradio"
-                      id="fahrenheit"
-                      autocomplete="off"
-                      
-                    />
-                    <label class="btn btn-outline-dark" for="fahrenheit"
-                      ><strong>°F</strong></label
-                    >
-                  </div>
-                  </form>
-                  </div>
+                </div>
                 </div>
               </div>
             </div>
@@ -143,14 +145,14 @@
               >
                 <div class="card-body">
                   <div class="row">
-                    <div class="col-6" id="forecastDaysIcons">
+                    <div class="col-4" id="forecastDaysIcons">
                       <h3 class="dayOne"></h3>
                       <h3 class="dayTwo"></h3>
                       <h3 class="dayThree"></h3>
                       <h3 class="dayFour"></h3>
                       <h3 class="dayFive"></h3>
                     </div>
-                    <div class="col-6" id="forecastDaysTemp">
+                    <div class="col-8" id="forecastDaysTemp">
                       <h3 class="dayOne"><span class="tempMax"></span>/<span class="tempMin"></span></h3>
                       <h3 class="dayTwo"><span class="tempMax"></span>/<span class="tempMin"></span></h3>
                       <h3 class="dayThree"><span class="tempMax"></span>/<span class="tempMin"></span></h3>
@@ -168,8 +170,7 @@
       <h6 class="footer">
         <a href="https://github.com/YouCodeArt/OrielWeatherApp" target="blank"
           >Open-source code</a
-        >
-        by <a href="https://www.instagram.com/tracy.codes/" target="blank">Tracy Andrade</a>✨
+        > on GitHub by <a href="https://www.instagram.com/tracy.codes/" target="blank">Tracy Andrade</a> ✨ | Hosted on <a href="https://www.netlify.com/">Netlify</a>
       </h6>
     </div>
     <script src="src/app.js"></script>

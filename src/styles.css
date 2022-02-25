@@ -61,6 +61,10 @@ body {
   text-align: center;
 }
 
+#instructions {
+  text-align: center;
+}
+
 #searchCity {
   display: block;
   margin: 4 auto;

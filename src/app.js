@@ -67,35 +67,42 @@ function displayForecast(response) {
   forecastIconsHTML = forecastIconsHTML + ``;
   forecastIcons.innerHTML = forecastIconsHTML;
 
-  /*let fahrenheit = document.querySelector("#fahrenheit");
+  let forecastTemp = document.querySelector("#forecastDaysTemp");
+  let fahrenheit = document.querySelector("#fahrenheit");
   let celsius = document.querySelector("#celsius");
 
-  if (fahrenheit.checked) {
-    temp.innerHTML = `${Math.round((celsiusTemp * 9) / 5 + 32)}°`;
-    fahrenheit.checked = true;
-    celsius.checked = false;
-  } else {
-    temp.innerHTML = `${Math.round(celsiusTemp)}°`;
-    celsius.checked = true;
-    fahrenheit.checked = false;
-  }
-}
-*/
-  let forecastTemp = document.querySelector("#forecastDaysTemp");
   let forecastTempHTML = ``;
   forecast.forEach(function (forecastDay, index) {
     if (index < 5) {
-      forecastTempHTML =
-        forecastTempHTML +
-        `<h3 class="dayOne"><span class="tempMax">${Math.round(
-          forecastDay.temp.max
-        )}°</span>/<span class="tempMin">${Math.round(
-          forecastDay.temp.min
-        )}°</span></h3><br/>`;
+      if (fahrenheit.checked) {
+        fahrenheit.checked = true;
+        celsius.checked = false;
+
+        forecastTempHTML =
+          forecastTempHTML +
+          `<h3 class="dayOne"><span class="tempMax">${Math.round(
+            (forecastDay.temp.max * 9) / 5 + 32
+          )}° </span>/ <span class="tempMin">${Math.round(
+            (forecastDay.temp.min * 9) / 5 + 32
+          )}° </span></h3><br/>`;
+      } else {
+        celsius.checked = true;
+        fahrenheit.checked = false;
+
+        forecastTempHTML =
+          forecastTempHTML +
+          `<h3 class="dayOne"><span class="tempMax">${Math.round(
+            forecastDay.temp.max
+          )}° </span>/ <span class="tempMin">${Math.round(
+            forecastDay.temp.min
+          )}° </span></h3><br/>`;
+      }
     }
   });
   forecastTempHTML = forecastTempHTML + ``;
   forecastTemp.innerHTML = forecastTempHTML;
+
+  convertMetrics();
 }
 
 function getForecast(coordinates) {
@@ -112,7 +119,7 @@ function showTemp(response) {
   weatherIcon.setAttribute("alt", response.data.weather[0].description);
 
   celsiusTemp = response.data.main.temp;
-  convertMetrics();
+  //convertMetrics();
 
   document.querySelector("#currentCity").innerHTML = response.data.name;
   document.querySelector("#weatherDescription").innerHTML =
