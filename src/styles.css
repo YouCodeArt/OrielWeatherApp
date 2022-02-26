@@ -11,6 +11,7 @@ a {
 
 .container {
   font-family: "Ubuntu", sans-serif;
+  text-align: center;
 }
 
 #appName {
@@ -20,7 +21,7 @@ a {
 }
 
 #forecastIcon {
-  font-size: 60px;
+  font-size: 50px;
 }
 
 #updated {
@@ -41,32 +42,27 @@ a {
 }
 
 #currentTemp {
-  text-align: center;
-  font-size: 50px;
+  font-size: 40px;
 }
 
 #currentCity {
-  text-align: center;
-  font-size: 30px;
+  font-size: 25px;
   font-weight: bold;
 }
 
 #weatherDescription {
-  font-size: 20px;
-  text-align: center;
+  font-size: 18px;
   font-weight: normal;
   text-transform: capitalize;
 }
 
 #conditions {
   font-weight: lighter;
-  font-size: 15px;
-  text-align: center;
+  font-size: 13px;
 }
 
 #instructions {
   font-size: 15px;
-  text-align: center;
 }
 
 #searchCity {
@@ -76,32 +72,34 @@ a {
 
 #cityInput {
   text-align: center;
-  font-size: 15px;
-  padding: 2px;
+  font-size: 16px;
+  padding: 3px;
 }
 
 #searchButton,
 #currentLocation {
   font-size: 15px;
-  color: black;
-  opacity: 0.6;
   display: block;
   margin: 0 auto;
-  padding: 5px;
+  padding: 3px;
 }
 
-#tempDegree {
-  text-align: center;
+.dayOne {
+  font-size: 20px;
 }
 
-#forecastDays,
-#forecastDaysTemp {
-  text-align: center;
-  font-size: 10px;
+ul {
+  list-style: none;
 }
 
-#forecastDaysIcons {
-  text-align: center;
+.tempMax {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.tempMin {
+  font-size: 20px;
+  font-weight: lighter;
 }
 
 .first-box {
@@ -135,7 +133,6 @@ a {
 h6.footer {
   font-size: small;
   padding-top: 10px;
-  text-align: center;
 }
 
 .outside {
