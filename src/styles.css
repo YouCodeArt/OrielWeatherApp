@@ -16,12 +16,13 @@ a {
 
 #appName {
   margin-top: 3px;
+  font-size: 20px;
   font-weight: bold;
   text-align: center;
 }
 
 #forecastIcon {
-  font-size: 50px;
+  font-size: 35px;
 }
 
 #updated {
@@ -32,37 +33,37 @@ a {
 
 #currentDay {
   text-align: right;
-  font-size: 15px;
+  font-size: 11px;
 }
 
 #currentTime {
   text-align: right;
-  font-size: 13px;
+  font-size: 11px;
   font-weight: normal;
 }
 
 #currentTemp {
-  font-size: 40px;
+  font-size: 35px;
 }
 
 #currentCity {
-  font-size: 25px;
+  font-size: 20px;
   font-weight: bold;
 }
 
 #weatherDescription {
-  font-size: 18px;
+  font-size: 15px;
   font-weight: normal;
   text-transform: capitalize;
 }
 
 #conditions {
   font-weight: lighter;
-  font-size: 13px;
+  font-size: 11px;
 }
 
 #instructions {
-  font-size: 15px;
+  font-size: 11px;
 }
 
 #searchCity {
@@ -72,20 +73,21 @@ a {
 
 #cityInput {
   text-align: center;
-  font-size: 16px;
+  font-size: 12px;
   padding: 3px;
 }
 
 #searchButton,
 #currentLocation {
-  font-size: 15px;
+  font-size: 12px;
   display: block;
   margin: 0 auto;
   padding: 3px;
+  flex: 1;
 }
 
 .dayOne {
-  font-size: 20px;
+  font-size: 14px;
 }
 
 ul {
@@ -93,39 +95,39 @@ ul {
 }
 
 .tempMax {
-  font-size: 20px;
+  font-size: 14px;
   font-weight: bold;
 }
 
 .tempMin {
-  font-size: 20px;
+  font-size: 14px;
   font-weight: lighter;
 }
 
 .first-box {
   min-width: 100px;
-  max-height: 350px;
+  max-height: 300px;
   margin-top: 20px;
   margin-left: 20px;
 }
 
 .second-box {
   min-width: 100px;
-  max-height: 350px;
+  max-height: 300px;
   margin-top: 20px;
   margin-right: 20px;
 }
 
 .third-box {
   min-width: 100px;
-  max-height: 320px;
+  max-height: 300px;
   margin-bottom: 20px;
   margin-left: 20px;
 }
 
 .fourth-box {
   min-width: 100px;
-  max-height: 320px;
+  max-height: 300px;
   margin-bottom: 20px;
   margin-right: 20px;
 }
@@ -139,5 +141,5 @@ h6.footer {
   display: block;
   margin: 0 auto;
   min-width: 400px;
-  max-width: 600px;
+  max-width: 400px;
 }
