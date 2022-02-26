@@ -82,14 +82,15 @@ a {
 
 #searchButton,
 #currentLocation {
-  font-size: 13px;
+  font-size: 15px;
+  color: black;
+  opacity: 0.6;
   display: block;
   margin: 0 auto;
   padding: 5px;
 }
 
 #tempDegree {
-  font-size: small;
   text-align: center;
 }
 
