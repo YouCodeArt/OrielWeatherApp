@@ -14,9 +14,9 @@ a {
 }
 
 #appName {
+  margin-top: 3px;
   font-weight: bold;
   text-align: center;
-  line-height: 1.5;
 }
 
 #forecastIcon {
@@ -25,33 +25,34 @@ a {
 
 #updated {
   text-align: right;
-  font-size: 12px;
+  font-size: 10px;
   opacity: 0.3;
 }
 
 #currentDay {
   text-align: right;
-  font-size: 17px;
+  font-size: 15px;
 }
 
 #currentTime {
   text-align: right;
-  font-size: 15px;
+  font-size: 13px;
   font-weight: normal;
 }
 
 #currentTemp {
   text-align: center;
-  font-size: 55px;
+  font-size: 50px;
 }
 
 #currentCity {
   text-align: center;
-  font-size: 35px;
+  font-size: 30px;
   font-weight: bold;
 }
 
 #weatherDescription {
+  font-size: 20px;
   text-align: center;
   font-weight: normal;
   text-transform: capitalize;
@@ -64,6 +65,7 @@ a {
 }
 
 #instructions {
+  font-size: 15px;
   text-align: center;
 }
 
@@ -72,20 +74,29 @@ a {
   margin: 4 auto;
 }
 
+#cityInput {
+  text-align: center;
+  font-size: 15px;
+  padding: 2px;
+}
+
 #searchButton,
 #currentLocation {
+  font-size: 13px;
   display: block;
   margin: 0 auto;
+  padding: 5px;
 }
 
 #tempDegree {
+  font-size: small;
   text-align: center;
 }
 
 #forecastDays,
 #forecastDaysTemp {
   text-align: center;
-  font-size: 12px;
+  font-size: 10px;
 }
 
 #forecastDaysIcons {
@@ -93,36 +104,42 @@ a {
 }
 
 .first-box {
+  min-width: 100px;
   max-height: 350px;
   margin-top: 20px;
   margin-left: 20px;
 }
 
 .second-box {
+  min-width: 100px;
   max-height: 350px;
   margin-top: 20px;
   margin-right: 20px;
 }
 
 .third-box {
-  max-height: 310px;
+  min-width: 100px;
+  max-height: 320px;
   margin-bottom: 20px;
   margin-left: 20px;
 }
 
 .fourth-box {
-  max-height: 310px;
+  min-width: 100px;
+  max-height: 320px;
   margin-bottom: 20px;
   margin-right: 20px;
 }
 
 h6.footer {
+  font-size: small;
   padding-top: 10px;
   text-align: center;
 }
 
 .outside {
+  display: block;
   margin: 0 auto;
-  min-width: 600px;
+  min-width: 400px;
   max-width: 600px;
 }
