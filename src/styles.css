@@ -1,8 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 body {
-  background-image: url("../img/app-background.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: #edd500;
   opacity: 0.8;
+  text-align: center;
 }
 
 a {
@@ -10,15 +11,8 @@ a {
 }
 
 .container {
-  font-family: "Ubuntu", sans-serif;
-  text-align: center;
-}
-
-#appName {
-  margin-top: 3px;
-  font-size: 20px;
-  font-weight: bold;
-  text-align: center;
+  margin: 50px 0;
+  font-family: "Montserrat", sans-serif;
 }
 
 #forecastIcon {
@@ -27,39 +21,39 @@ a {
 
 #updated {
   text-align: right;
-  font-size: 10px;
+  font-size: 8px;
   opacity: 0.3;
 }
 
 #currentDay {
   text-align: right;
-  font-size: 11px;
+  font-size: 10px;
 }
 
 #currentTime {
   text-align: right;
-  font-size: 11px;
+  font-size: 10px;
   font-weight: normal;
 }
 
 #currentTemp {
-  font-size: 35px;
+  font-size: 30px;
 }
 
 #currentCity {
-  font-size: 20px;
+  font-size: 15px;
   font-weight: bold;
 }
 
 #weatherDescription {
-  font-size: 15px;
+  font-size: 12px;
   font-weight: normal;
   text-transform: capitalize;
 }
 
 #conditions {
   font-weight: lighter;
-  font-size: 11px;
+  font-size: 9px;
 }
 
 #instructions {
@@ -73,7 +67,7 @@ a {
 
 #cityInput {
   text-align: center;
-  font-size: 12px;
+  font-size: 10px;
   padding: 3px;
 }
 
@@ -86,6 +80,11 @@ a {
   flex: 1;
 }
 
+#forecastDays,
+#forecastDaysIconsTemp {
+  margin-top: 20px;
+}
+
 .dayOne {
   font-size: 14px;
 }
@@ -95,12 +94,10 @@ ul {
 }
 
 .tempMax {
-  font-size: 14px;
   font-weight: bold;
 }
 
 .tempMin {
-  font-size: 14px;
   font-weight: lighter;
 }
 
